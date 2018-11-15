@@ -43,10 +43,6 @@ class justBladeAdminServiceProvider extends ServiceProvider
      */
     protected function bootForConsole()
     {
-        // Publishing the configuration file.
-        $this->publishes([
-            __DIR__ . '/../config/justbladeadmin.php' => config_path('justbladeadmin.php'),
-        ], 'justbladeadmin.config');
 
         // Publishing the views.
         $this->publishes([
