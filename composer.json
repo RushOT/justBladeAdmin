@@ -1,0 +1,43 @@
+{
+    "name": "rushot/justbladeadmin",
+    "description": ":description",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Akbar Tukhtamurodov",
+            "email": "rashot1995@gmail.com",
+            "homepage": "blog.codestudio.uz"
+        }
+    ],
+    "homepage": "https://github.com/rushot/justbladeadmin",
+    "keywords": ["Laravel", "justBladeAdmin"],
+    "require": {
+        "illuminate/support": "~5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~7.0",
+        "mockery/mockery": "^1.1",
+        "orchestra/testbench": "~3.0",
+        "sempro/phpunit-pretty-print": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "RushOT\\justBladeAdmin\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "RushOT\\justBladeAdmin\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "RushOT\\justBladeAdmin\\Providers\\justBladeAdminServiceProvider"
+            ],
+            "aliases": {
+
+            }
+        }
+    }
+}
