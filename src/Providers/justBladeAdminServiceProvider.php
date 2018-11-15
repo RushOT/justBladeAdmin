@@ -13,7 +13,26 @@ class justBladeAdminServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        // Publishing the views.
+        $this->publishes([
+            __DIR__ . '/../resources/views' => resource_path('views'),
+        ]);
 
+        // Publishing assets.
+        $this->publishes([
+            __DIR__ . '/../resources/images' => public_path('images'),
+        ]);
+
+        // Publishing assets.
+        $this->publishes([
+            __DIR__ . '/../resources/js' => public_path('js'),
+        ]);
+
+
+        // Controller.
+        $this->publishes([
+            __DIR__ . '/../Http/Controllers/Dashboard' => app_path('Http/Controllers/Dashboard'),
+        ]);
     }
 
     /**
@@ -23,7 +42,7 @@ class justBladeAdminServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        
+
     }
 
     /**
@@ -67,8 +86,4 @@ class justBladeAdminServiceProvider extends ServiceProvider
 
     }
 
-    private function getPath($path)
-    {
-        return __DIR__ . '/../../' . $path;
-    }
 }
